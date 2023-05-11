@@ -1,0 +1,66 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {margin: 0; padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+
+body {font-family: 'Nanum Gothic', sans-serif; font-size: 14px;}
+
+/* 미디어 쿼리 구간 설정 */
+/* 768px 이상 구간 설정 //////////*/
+@media (min-width:768px) {
+
+    /* CSS 설정 */
+    /* 레이아웃 설정 */
+
+    /* box1, box2의 가로정렬 */
+    .boxA {display: flex; justify-content: space-between;}
+
+    /* box4-1, box4-2의 가로정렬 */
+    .box4 {display: flex; justify-content: space-between;}
+    .box4-1 {width: 65%;}
+    .box4-2 {width: 25%;}
+
+    /* box5-1, box-5-2, box5-3의 가로정렬 */
+    .box5 {display: flex; justify-content: space-between;}
+    .box5>div {width: 32%;}
+
+    /* box6, box7의 가로정렬 */
+    .box6and7 {display: flex;}
+    .box6, .box7 {width: 50%;}
+
+    /* box6-1, box6-2, box6-2의 가로정렬 */
+    .box6 {display: flex; justify-content: space-between;}
+    .box6>div {width: 50%;}
+
+    /* box7-1, box7-2의 가로정렬 */
+    .box7 {display: flex;}
+    .box7-1, .box7-2 {width: 50%;}
+
+    /* box10-1, box10-2, box10-3, box10-4의 가로정렬 */
+    .box10-1 {display: flex;}
+    .box10-1-1 {width: 30%;}
+    .box10-1-2 {width: 70%;}
+
+    .box10-2 {display: flex;}
+    .box10-2-1 {width: 70%;}
+    .box10-2-2 {width: 30%;}
+
+    .box10-3 {display: flex;}
+    .box10-3-1 {width: 30%;}
+    .box10-3-2 {width: 70%;}
+
+    .box10-4 {display: flex;}
+    .box10-4-1 {width: 70%;}
+    .box10-4-2 {width: 30%;}
+
+    /* box13, box14, box15의 가로정렬 */
+    .boxC {display: flex; justify-content: space-between;}
+    .box13, .box13, .box15 {width: 32%;}
+
+    /* box15-1, box15-2, box15-3의 가로정렬 */
+    .box15 {display: flex;}
+    .box15>div {width: 33.333%;}
+
+}
