@@ -4,63 +4,809 @@
 * {margin: 0; padding: 0;}
 ul, ol {list-style: none;}
 a {text-decoration: none; color: #000;}
-
 body {font-family: 'Nanum Gothic', sans-serif; font-size: 14px;}
 
-/* 미디어 쿼리 구간 설정 */
-/* 768px 이상 구간 설정 //////////*/
-@media (min-width:768px) {
+/* @@ header @@ */
+header {display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        width: 80%;
+        height: 170px;
+        margin: 0 auto;}
 
-    /* CSS 설정 */
-    /* 레이아웃 설정 */
+/* 로고 */
+.box1 {width: 200px;
+        height: 120px;}
+.logo {width: 200px ;
+        height: 120px;
+        background-image: url(../img/logo_main.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-indent: -9999px;}
 
-    /* box1, box2의 가로정렬 */
-    .boxA {display: flex; justify-content: space-between;}
+/* ## 메뉴 / 로그인 ## */
+.box2 {width: 80%;
+        height: 100px;}
+/* 로그인 */
+.logIn {position: absolute;
+        right: 50px;
+        top:20px;
+        display: flex;}
+.logIn a {padding: 10px;
+                font-size: 14px;
+                color: #E3D9CD;
+                border-bottom: 1px solid #EAE2D9;}
+.box2 .logIn a:hover {color: #B1AE8F;}
 
-    /* box4-1, box4-2의 가로정렬 */
-    .box4 {display: flex; justify-content: space-between;}
-    .box4-1 {width: 65%;}
-    .box4-2 {width: 25%;}
+/* 메뉴 */
+.menu {display: flex;
+        justify-content: center;}
+.menu li a {display: block;
+        padding: 10px 30px;
+        margin-top: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #B47C60;}
+.menu li a:hover {color: #B1AE8F;}
 
-    /* box5-1, box-5-2, box5-3의 가로정렬 */
-    .box5 {display: flex; justify-content: space-between;}
-    .box5>div {width: 32%;}
 
-    /* box6, box7의 가로정렬 */
-    .box6and7 {display: flex;}
-    .box6, .box7 {width: 50%;}
 
-    /* box6-1, box6-2, box6-2의 가로정렬 */
-    .box6 {display: flex; justify-content: space-between;}
-    .box6>div {width: 50%;}
+/* @@ 컨텐츠 박스000 @@ */
+/* 본문의 전체 컨텐츠가 있는 박스 */
+.conBox000 {width: 100%;
+        margin: 0 auto;}
 
-    /* box7-1, box7-2의 가로정렬 */
-    .box7 {display: flex;}
-    .box7-1, .box7-2 {width: 50%;}
+/* ## 히어로 ## */
+.box3 {position: relative;}
+/* 이미지 / 점*/
+.heroImg {width: 100%;
+        height: 80vh;
+        background-image: url(../img/main_1.png);
+        background-size: cover;
+        text-indent: -99999px;}
+/* 점 */
+.heroDot {position: absolute;
+        left: 44%;
+        bottom: 50px;}
+.heroDot span {padding: 10px;
+        color: #B1AE8F;}
+.heroDot span:hover {opacity: 0.8;}
 
-    /* box10-1, box10-2, box10-3, box10-4의 가로정렬 */
-    .box10-1 {display: flex;}
-    .box10-1-1 {width: 30%;}
-    .box10-1-2 {width: 70%;}
 
-    .box10-2 {display: flex;}
-    .box10-2-1 {width: 70%;}
-    .box10-2-2 {width: 30%;}
+/* @@ 컨텐츠박스 001 @@ */
+.conBox001{background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), #EFE5D9;
+        width: 100%;
+        height: 630px;
+        padding: 50px 0;
+        background-image: url(../img/main_sub.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: -600px;}
 
-    .box10-3 {display: flex;}
-    .box10-3-1 {width: 30%;}
-    .box10-3-2 {width: 70%;}
+/* ## 관람시간 / 관람료 ## */
+.box4 {display: flex;
+        width: 80%;
+        height: 105px;
+        margin: 0 auto;
+        justify-content: space-between;}
 
-    .box10-4 {display: flex;}
-    .box10-4-1 {width: 70%;}
-    .box10-4-2 {width: 30%;}
+/* 관람시간 */
+.time {width: 45%;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background: rgba(253, 250, 243, 0.5);
+        border-radius: 20px;
+        justify-content: center;}
+.timeImg img {vertical-align: middle;}
+.timeImg i {margin-left: 10px;
+        padding: 10px;
+        color: #AA8B67;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: bold;}
+.timeTxt {margin-left: 50px;
+        color: #675D52;}
+.timeTxt span {font-size: 12px;
+        color: #D6C3AE;}
+/* 관람료 */
+.pay {width: 45%;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background: rgba(253, 250, 243, 0.5);
+        border-radius: 20px;
+        justify-content: center;}
+.payImg img {vertical-align: middle;}
+.payImg i {margin-left: 10px;
+        padding: 10px;
+        color: #AA8B67;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: bold;}
+.payTxt {margin-left: 50px;
+        color: #675D52;}
 
-    /* box13, box14, box15의 가로정렬 */
-    .boxC {display: flex; justify-content: space-between;}
-    .box13, .box13, .box15 {width: 32%;}
 
-    /* box15-1, box15-2, box15-3의 가로정렬 */
-    .box15 {display: flex;}
-    .box15>div {width: 33.333%;}
 
+
+
+/* ## 대관이용 / 단체관람 / 편의시설 ## */
+.box5 {display: flex;
+        width: 80%;
+        height: 105px;
+        margin: 0 auto;
+        margin-top: 10px;
+        justify-content: space-between;}
+.mu, .manyEx, .con {width: 28%;
+        align-items: center;
+        padding: 20px;
+        background: rgba(102, 93, 83, 0.5);
+        border-radius: 20px;
+        justify-content: center;
+        text-align: center;}
+
+/* 대관이용 */
+.mu li:nth-child(1) {margin-top: -5px;}
+.mu li:nth-child(2) {font-size: 16px;
+        margin-bottom: 3px;
+        font-weight: bold;
+        color:#FDFAF3;}
+.mu li:nth-child(3) {font-size: 14px;
+        color:#FDFAF3;}
+
+/* 단체관람 */
+.manyEx li:nth-child(1) {margin-top: -5px;}
+.manyEx li:nth-child(2) {font-size: 16px;
+        margin-bottom: 3px;
+        font-weight: bold;
+        color:#FDFAF3;}
+.manyEx li:nth-child(3) {font-size: 14px;
+        color:#FDFAF3;}
+
+/* 편의시설 */
+.con li:nth-child(1) {margin-top: -5px;}
+.con li:nth-child(2) {font-size: 16px;
+        margin-bottom: 3px;
+        font-weight: bold;
+        color:#FDFAF3;}
+.con li:nth-child(3) {font-size: 14px;
+        color:#FDFAF3;}
+
+
+
+/* ## 알립니다 / 이벤트 ## */
+.box6 {display: flex;
+        width: 80%;
+        height: 420px;
+        margin: 0 auto;
+        margin-top: 5%;
+        justify-content: space-between;
+        height:260px;}
+
+
+/* 알립니다 */
+.notice {display: flex;
+        width: 45%;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;}
+
+.noticeTitle {text-align: center;
+        margin-right: 20px;}
+.noticeTitle li:nth-child(2) {font-size:18px;
+        font-weight: bold;
+        color: #FDFAF3;}
+.noticeTitle li:nth-child(3) {font-size: 14px;
+        color: #FDFAF3;}
+
+.noticeTxt em {font-style: normal;
+        font-size: 14px;
+        font-weight: bold;
+        color: #B1AE8F;
+        padding: 5px;}
+.noticeTxt li {font-size: 14px;
+        line-height: 30px;
+        padding: 8px 15px;
+        color: #675D52;}
+.noticeTxt span {font-size: 14px;
+        color: #BDB6AD;
+        float: right;
+        margin-left: 80px;}
+
+
+/* 이벤트 */
+.event {width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;}
+
+.eventTitle {text-align: center;
+        margin-right: 20px;}
+.eventTitle li:nth-child(2) {font-size:18px;
+        font-weight: bold;
+        color: #FDFAF3;}
+.eventTitle li:nth-child(3) {font-size: 14px;
+        color: #FDFAF3;}
+
+.eventImgBox {position: relative;
+        width: 416px;
+        height: 260px;
+        margin-left: 30px;}
+
+.eventImgBox>li {position: absolute;}
+.eventDot {color: #B1AE8F;
+        position: absolute;
+        margin-top: 200px;
+        margin-left: 110px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @@컨텐츠박스 002 @@ */
+.conBox002 {background: #807365;
+        background-image: url(../img/his_bottom.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: 500px;
+        padding: 30px 0;
+        width: 100%;
+        height: 700px;}
+
+/* ## 대전의 역사 ## */
+.box8 {position: relative;
+        width: 100%;
+        height: 600px;}
+
+/* 타이틀 */
+.hisTitle {display: flex;
+        margin-left: 300px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #EFE5D9;
+        letter-spacing:5px;}
+.hisTitle em {font-style: normal;
+        color: #AA8B67;}
+.hisTitle:after {content: "";
+        flex-grow: 1;
+        margin: 10px 200px;
+        margin-left: 50px;
+        background-color: #EFE5D9;
+        height: 1px;}
+
+/* 이미지 / 텍스트 */
+/* 이미지 */
+.his {position: relative;}
+.his img {position: absolute;}
+
+.hisImg li {position: absolute;
+        width: 65%;
+        height: 500px;
+        left: 20%;
+        background-size: cover;
+        text-indent: -9999px;}
+
+.hisImg1 {background-image: url(../img/his_1.png);}
+.hisImg2 {background-image: url(../img/his_img_2.png);}
+.hisImg3 {background-image: url(../img/his_img_3.png);}
+.hisImg4 {background-image: url(../img/his_img_4.png);}
+.hisImg5 {background-image: url(../img/his_img_5.png);}
+
+/* 텍스트 */
+.hisTxt {position: relative;
+        width: 65%;
+        height: 500px;
+        left: 20%;
+        background-color: rgba(102, 93, 83, 0.8);
+        font-size: 14px;
+        color: #EFE5D9;
+        letter-spacing: 1px;
+        text-align: center;
+        opacity: 0;}
+.hisTxt div {position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);}
+.hisTxt p {font-size: 18px;
+        font-weight: bold;}
+.hisTxt:hover {opacity: 1;}
+
+/* 버튼 */
+.hisImgBtn {display: flex;
+        justify-content: space-around;}
+.hisImgBtn1 {position: absolute;
+        top: 65%;
+        margin-top: -32.5px;
+        left: 15%;}
+.hisImgBtn2 {
+        position: absolute;
+        top: 65%;
+        margin-top: -32.5px;
+        right: 10%;}
+
+
+
+
+
+/* @@컨텐츠박스003 */
+.conBox003 {background: #FDFAF3;
+        padding: 30px 0;
+        width: 100%;
+        height: 700px;}
+
+/* ## 전시안내 ## */
+.box9 {position: relative;
+        width: 100%;
+        height: 700px;
+        }
+.box9-1 {background-color: #675D52;
+        margin-top: -50px;
+        padding: 50px;
+        border-radius: 0px 0px 40px 40px;
+        height: 300px;
+        background-image: url(../img/ex_sub.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: 150px;}
+
+/* 타이틀 */
+.exTitle {display: flex;
+        margin-left: 300px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #EFE5D9;
+        letter-spacing:5px;}
+.exTitle em {font-style: normal;
+        color: #AA8B67;}
+.exTitle:after {content: "";
+        flex-grow: 1;
+        margin: 10px 200px;
+        margin-left: 50px;
+        background-color: #EFE5D9;
+        height: 1px;}
+/* 타이틀 텍스트 / 타이틀 버튼 */
+.exTB {width: 700px;
+        height: 150px;
+        text-align: left;
+        position: absolute;
+        margin: 10px;
+        margin-top: 10px;
+        margin-left: 300px;
+        border-left: 4px solid #EFE5D9;}
+
+/* 타이틀 텍스트 */
+.exTitleTxt {
+        margin-left: 15px;
+        font-size: 14px;
+        color: #EFE5D9;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
 }
+/* 타이틀 버튼 */
+.exBtnBox {margin-left: 15px;}
+.exBtnBox .btn1, .btn2 {
+        border: 0;
+        outline: 0;
+        border-radius: 80px;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing:1.2px;
+        background-color: #7F7365;
+        color: #AA8B67;
+        padding: 20px 40px;
+        margin-top: 10px;
+        margin-right: 15px;
+        cursor: pointer;}
+.exBtnBox .btn1:hover {background: rgba(253, 250, 243, 0.5);
+        color: #FDFAF3;}
+.exBtnBox .btn2:hover {background: rgba(253, 250, 243, 0.5);
+                color: #FDFAF3;}
+
+/* 전시 */
+.box9-2 {width: 100%;
+        height: 430px;}
+/* 상설전시 */
+.ex {display: flex;
+        justify-content: center;
+        margin-top: -50px;}
+.ex>li>.exTxt {position: absolute;
+        bottom: -81px;
+        text-align: center;
+        width: 260px;
+        height: 100px;
+        background: rgba(110, 99, 87, 0.5);
+        border-radius: 0px 0px 20px 20px;
+        border-top: 2px dotted #DFD5C9;
+        color: #DFD5C9;}
+.ex>li>.exTxt>p {margin-top: 30px;}
+
+.exBtn {margin-top:-260px;
+        text-align: center;
+        width: 100%;}
+.exBtn1, .exBtn2 {
+        border: 0;
+        outline: 0;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: rgba(127, 115, 101);
+        color: #FDFAF3;
+        width: 120px;
+        height: 35px;
+        cursor: pointer;}
+.exBtn1 {margin-bottom: 5px;}
+
+/* 특별전시 */
+.exEvent {display: flex;
+        justify-content: center;
+        margin-top: -250px;}
+.exEvent>li>.exEventTxt {position: absolute;
+        bottom: -81px;
+        text-align: center;
+        width: 260px;
+        height: 100px;
+        background: rgba(110, 99, 87, 0.5);
+        border-radius: 0px 0px 20px 20px;
+        border-top: 2px dotted #DFD5C9;
+        color: #DFD5C9;}
+.exEvent>li>.exEventTxt>p {margin-top: 30px;}
+
+.exEventBtn {margin-top:-260px;
+        text-align: center;
+        width: 100%;}
+.exEventBtn1, .exEventBtn2 {
+        border: 0;
+        outline: 0;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: rgba(127, 115, 101);
+        color: #FDFAF3;
+        width: 120px;
+        height: 35px;
+        cursor: pointer;}
+.exEventBtn1 {margin-bottom: 5px;}
+
+
+
+
+
+
+/* @@ 컨텐츠 박스 004 */
+.conBox004 {background: #FDFAF3;
+        padding: 30px 0;
+        width: 100%;
+        height: 1440px;}
+/* ## 소장유물 ## */
+/* 타이틀 */
+.box10 {
+        position: relative;
+        width: 100%;
+        height: 1450px;
+        }
+.box10 .title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #AA8B67;
+        letter-spacing:5px;
+        margin-left: 300px;
+        margin-top: 50px;
+        margin-bottom: 50px;}
+
+/* 이미지 / 텍스트 / 버튼 */
+.reImg {background-color: yellowgreen;
+        position: absolute;
+        width: 100%;
+        height: 1360px;}
+
+.reImg1 {background-image: url(../img/re_img_1.png);
+        background-size: cover;
+        width: 100%;
+        height: 340px;
+        text-indent: -9999px;}
+.reImg2 {background-image: url(../img/re_img_2.png);
+        background-size: cover;
+        width: 100%;
+        height: 340px;
+        text-indent: -9999px;}
+.reImg3 {background-image: url(../img/re_img_3.png);
+        background-size: cover;
+        width: 100%;
+        height: 340px;
+        text-indent: -9999px;}
+.reImg4 {background-image: url(../img/re_img_4.png);
+        background-size: cover;
+        width: 100%;
+        height: 340px;
+        text-indent: -9999px;}
+
+.reTxt {position: absolute;
+        width: 100%;
+        height: 1360px;}
+/* 버튼 */
+.reTxt button {
+        width: 170px;
+        height: 50px;
+        border: 0;
+        outline: 0;
+        font-size: 14px;
+        padding: 10px 20px;
+        color: #E3D9CD;
+        background: rgba(127, 115, 101);
+        border-radius: 80px;
+        cursor: pointer;}
+.reTxt button:hover {background-color: rgba(253, 250, 243, 0.8);
+        color: #7F7365;}
+.reTxt1 button, .reTxt3 button {margin-top: 2%;
+                margin-left: 10%;}
+.reTxt2 button, .reTxt4 button {margin-top: 2%;
+                margin-left: 72%;}
+
+/* 텍스트1 */
+.reTxt1 {position: absolute;
+        height: 340px;
+        width: 50%;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #675D52;
+        background: linear-gradient(180deg, #E3D9CD 0%, rgba(217, 217, 217, 0) 100%);
+        backdrop-filter: blur(5px);
+        border-radius: 0 85px 85px 0;}
+.reTxt1 p {
+        margin-top: 13%;
+        margin-left: 10%;}
+.reTxt1 em {font-style: normal;
+        font-weight: bold;
+        color: #AA8B67;}
+/* 텍스트3 */
+.reTxt3 {position: absolute;
+        height: 340px;
+        bottom: 25%;
+        height: 340px;
+        width: 50%;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #675D52;
+        background: linear-gradient(180deg, #E3D9CD 0%, rgba(217, 217, 217, 0) 100%);
+        backdrop-filter: blur(5px);
+        border-radius: 0 85px 85px 0;}
+.reTxt3 p {
+        margin-top: 13%;
+        margin-left: 10%;}
+.reTxt3 em {font-style: normal;
+        font-weight: bold;
+        color: #AA8B67;}
+
+/* 텍스트2 */
+.reTxt2 {position: absolute;
+        top: 25%;
+        right:0;
+        height: 340px;
+        width: 50%;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #675D52;
+        background: linear-gradient(180deg, #E3D9CD 0%, rgba(217, 217, 217, 0) 100%);
+        backdrop-filter: blur(5px);
+        border-radius: 85px 0 0 85px;}
+.reTxt2 p {
+        text-align: right;
+        margin-top: 13%;
+        margin-right: 10%;}
+.reTxt2 em {font-style: normal;
+        font-weight: bold;
+        color: #AA8B67;}
+
+/* 텍스트4 */
+.reTxt4 {position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 340px;
+        width: 50%;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #675D52;
+        background: linear-gradient(180deg, #E3D9CD 0%, rgba(217, 217, 217, 0) 100%);
+        backdrop-filter: blur(5px);
+        border-radius: 85px 0 0 85px;}
+.reTxt4 p {
+        text-align: right;
+        margin-top: 13%;
+        margin-right: 10%;}
+.reTxt4 em {font-style: normal;
+        font-weight: bold;
+        color: #AA8B67;}
+
+
+
+
+
+/* @@컨텐츠박스005 */
+.conBox005 {background: #675D52;
+        padding: 30px 0;
+        width: 100%;
+        height: 650px;
+        background-image: url(../img/culture_bottom.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: 605px;}
+
+/* ## 문화프로그램 ## */
+.box11 {position: relative;
+        width: 100%;
+        height: 650px;
+        background-image: url(../img/culture_middle.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-position-y: 50%;
+        margin-top: 10px;}
+
+
+/* 타이틀 */
+.cuTitle {margin-left: 300px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #EFE5D9;
+        letter-spacing:5px;}
+.cuTitle em {font-style: normal;
+        color: #AA8B67;}
+
+/* 이미지 */
+.culture {display: flex;
+        justify-content: space-around;
+        margin-top: 120px;}
+.cuImg {width: 350px;
+        height: 350px;
+        border-radius: 175px;}
+
+/* 아이콘 */
+.cuCon1 {width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 35%;
+        left: 16.5%;
+        transform: translate(-50%, -50%);}
+.cuCon2 {width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);}
+.cuCon3 {width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 35%;
+        left: 83.5%;
+        transform: translate(-50%, -50%);}
+
+/* 텍스트 */
+.cuTxt1 {font-size: 16px;
+        font-weight: bold;
+        color: #675D52;
+        position: absolute;
+        top: 45%;
+        left: 16.5%;
+        transform: translate(-50%, -50%);
+        text-align: center;}
+
+.cuTxt2 {font-size: 16px;
+        font-weight: bold;
+        color: #675D52;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;}
+
+.cuTxt3 {font-size: 16px;
+        font-weight: bold;
+        color: #675D52;
+        position: absolute;
+        top: 45%;
+        left: 83.5%;
+        transform: translate(-50%, -50%);
+        text-align: center;}
+
+/* 버튼 */
+/* 버튼 위치 */
+.cuBtn1 {width: 120px;
+        height: 85px;
+        position: absolute;
+        top: 60%;
+        left: 16.5%;
+        transform: translate(-50%, -50%);
+        text-align: center;}
+
+.cuBtn2 {width: 120px;
+        height: 85px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;}
+
+.cuBtn3 {width: 120px;
+        height: 85px;
+        position: absolute;
+        top: 60%;
+        left: 83.5%;
+        transform: translate(-50%, -50%);
+        text-align: center;}
+
+/* 버튼 스타일 */
+.cuBtn1-1, .cuBtn1-2, .cuBtn2-1, .cuBtn2-2, .cuBtn3-1, .cuBtn3-2
+        {margin-top: 5px;
+        border: 0;
+        outline: 0;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: #7F7365;
+        color: #FDFAF3;
+        width: 120px;
+        height: 35px;
+        cursor: pointer;}
+
+
+/* @@컨텐츠 박스006 */
+.conBox006 {background: #FDFAF3;
+        padding: 30px 0;
+        width: 100%;
+        height: 360px;}
+/* ## 오시는 길 ## */
+/* 타이틀 / 텍스트 */
+.mapTitle {margin-left: 300px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #584F45;
+        letter-spacing:5px;}
+.mapTxt {margin-left: 300px;
+        margin-top: 30px;
+        font-size: 16px;
+        color: #584F45;
+        letter-spacing:1px;}
+
+
+/* @@ footer @@ */
+footer {background-color: #37322C;
+        padding: 30px 0;
+        width: 100%;
+        height: 310px;}
+
+footer ul {display: flex;
+        justify-content: space-around;
+        margin-top: 210px;}
+
+.footerTxt {display: flex;}
+.footerTxt p {color:#FDFAF3;
+        padding: 20px;
+        margin: 10px 10px;}
+
+.footerImg {width: 224.72px;
+        height: 85.96px;}
+
+.snsSet {display: flex;}
+.snsSet i {color:#FDFAF3;
+        font-size: 20px;
+        padding: 20px;
+        margin: 10px 10px;}
