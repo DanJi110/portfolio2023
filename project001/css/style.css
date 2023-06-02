@@ -237,7 +237,13 @@ header {display: flex;
         height: 260px;
         margin-left: 30px;}
 
-.eventImgBox>li {position: absolute;}
+.eventImgBox li {
+        position: absolute;
+        opacity: 0;}
+.eventImgBox li:nth-child(1) {
+        opacity: 1;
+}
+
 .eventDot {color: #B1AE8F;
         position: absolute;
         margin-top: 200px;
@@ -301,7 +307,7 @@ header {display: flex;
         background-size: cover;
         text-indent: -9999px;}
 
-.hisImg1 {background-image: url(../img/his_1.png);}
+.hisImg1 {background-image: url(../img/his_img_1.png);}
 .hisImg2 {background-image: url(../img/his_img_2.png);}
 .hisImg3 {background-image: url(../img/his_img_3.png);}
 .hisImg4 {background-image: url(../img/his_img_4.png);}
